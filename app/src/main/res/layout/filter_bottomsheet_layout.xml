@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="32dp">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Filters"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Price Range"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="₱"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="₱₱"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="₱₱₱"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/custom_hd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Distance"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="km"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progressTint="@color/orange"
+        android:stepSize="1"
+        android:thumbTint="@color/orange" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="8dp"
+        android:background="@drawable/custom_hd" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Ratings"
+        android:textSize="16sp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="radioButton1,radioButton2,radioButton3,radioButton4,radioButton5"
+            app:flow_horizontalGap="8dp"
+            app:flow_verticalGap="8dp"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="5 Stars Up"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="4 Stars Up"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="3 Stars Up"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="2 Stars Up"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:fontFamily="@font/jost"
+            android:text="1 Star Up"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_selector" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        style="@style/customButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:text="Let's Go" />
+</LinearLayout>

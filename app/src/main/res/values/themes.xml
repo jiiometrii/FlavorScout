@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FlavorScout" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="customButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="custom_peso_rating" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/custom_peso_ratingbar</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+    <style name="Theme.FlavorScout" parent="Base.Theme.FlavorScout" />
+</resources>
