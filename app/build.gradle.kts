@@ -42,7 +42,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.flexbox)
+    implementation(libs.google.flexbox)
     implementation(libs.imageslideshow)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
