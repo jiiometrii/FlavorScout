@@ -87,6 +87,7 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/distanceNumTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
@@ -104,6 +105,7 @@
 
 
     <SeekBar
+        android:id="@+id/distanceSeekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:max="100"
@@ -134,7 +136,7 @@
             android:id="@+id/flow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="radioButton1,radioButton2,radioButton3,radioButton4,radioButton5"
+            app:constraint_referenced_ids="star5,star4,star3,star2,star1"
             app:flow_horizontalGap="8dp"
             app:flow_verticalGap="8dp"
             app:flow_wrapMode="aligned"
@@ -142,7 +144,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioButton
-            android:id="@+id/radioButton1"
+            android:id="@+id/star5"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginEnd="4dp"
@@ -154,7 +156,7 @@
             android:textColor="@drawable/text_selector" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/star4"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="4dp"
@@ -166,7 +168,7 @@
             android:textColor="@drawable/text_selector" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/star3"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="4dp"
@@ -178,7 +180,7 @@
             android:textColor="@drawable/text_selector" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/star2"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="4dp"
@@ -190,7 +192,7 @@
             android:textColor="@drawable/text_selector" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/star1"
             android:layout_width="80dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="4dp"
