@@ -173,9 +173,7 @@ class MainActivity : AppCompatActivity(), RestaurantPreviewAdapter.OnItemClickLi
     }
 
     private fun fetchRestaurantPreviews(filters: RestaurantFilters) {
-        val distanceKm = getDistanceFromFilter() + searchOffset
-        Log.d("MainActivity", "Filters: $filters")
-        Log.d("MainActivity", "Fetching restaurants with distance: $distanceKm km")
+        locationLatLng = LatLng(locationLatLng.latitude + searchOffset, locationLatLng.longitude + searchOffset)
 
         if (!isLoading) {
             isLoading = true
@@ -183,7 +181,7 @@ class MainActivity : AppCompatActivity(), RestaurantPreviewAdapter.OnItemClickLi
             CoroutineScope(Dispatchers.Main).launch {
                 try {
                     val restaurantPreviews = GetPlaces.getNearbyRestaurantPreviews(
-                        filters.distance.toDouble() + searchOffset,
+                        filters.distance.toDouble(),
                         locationLatLng,
                         filters.priceRange,
                         filters.minRating
@@ -204,7 +202,7 @@ class MainActivity : AppCompatActivity(), RestaurantPreviewAdapter.OnItemClickLi
                         isLoading = false
                     }
 
-                    searchOffset += 1.5
+                    searchOffset += 0.009
                     delay(3000)
                     isLoading = false
 

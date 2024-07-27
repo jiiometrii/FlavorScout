@@ -184,12 +184,8 @@ object GetPlaces {
             val nearbyResponse = placesClient.searchNearby(searchNearbyRequest).await()
             val places = nearbyResponse.places
 
-            Log.d("GetPlaces", "Price Range: $priceRange")
-            Log.d("GetPlaces", "Min Rating: $minRating")
             for (place in places) {
                 val latLng = place.latLng
-                Log.d("GetPlaces", "Place Price Level: ${place.priceLevel}")
-                Log.d("GetPlaces", "Place Rating: ${place.rating}")
 
                     if (latLng != null) {
                         val distance = calculateDistance(
