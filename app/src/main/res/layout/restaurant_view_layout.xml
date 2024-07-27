@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.denzcoskun.imageslider.ImageSlider
-        android:id="@+id/image_slider"
+    <ImageView
+        android:id="@+id/restaurantImageView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        app:error_image="@color/purple"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,7 +20,7 @@
         android:paddingHorizontal="16dp"
         android:paddingBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_slider"
+        app:layout_constraintTop_toBottomOf="@id/restaurantImageView"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout

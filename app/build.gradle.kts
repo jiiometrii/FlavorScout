@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.mobdeve.s11.manlangit.bernardo.flavorscout"
-        minSdk = 23
+        minSdk = 34
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -44,6 +44,12 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.google.flexbox)
     implementation(libs.imageslideshow)
+    implementation(libs.places)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation (libs.kotlinx.coroutines.play.services)
+    implementation (libs.play.services.tasks)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
