@@ -24,7 +24,7 @@ class RestaurantPreviewAdapter(
         val restoPreviewIv: ImageView = itemView.findViewById(R.id.restoPreviewIv)
         val distanceTv: TextView = itemView.findViewById(R.id.distanceTv)
         val ratingNumberTv: TextView = itemView.findViewById(R.id.ratingNumTv)
-        val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBar)
+        val ratingBar: RatingBar = itemView.findViewById(R.id.priceBar)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -53,7 +53,9 @@ class RestaurantPreviewAdapter(
         }
     }
 
-    override fun getItemCount(): Int = restaurantPreviews.size
+    override fun getItemCount(): Int {
+        return restaurantPreviews.size
+    }
 
     fun updateList(newList: List<Restaurant>) {
         val diffResult = DiffUtil.calculateDiff(RestaurantPreviewDiffCallback(restaurantPreviews, newList))

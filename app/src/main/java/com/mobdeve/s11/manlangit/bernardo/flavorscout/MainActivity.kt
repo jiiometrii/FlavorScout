@@ -155,15 +155,15 @@ class MainActivity : AppCompatActivity(), RestaurantPreviewAdapter.OnItemClickLi
 
             filters = RestaurantFilters(selectedPriceRange, selectedDistance, selectedMinRating.toDouble())
             bottomSheetDialog.dismiss()
+            applyFilters(filters)
         }
-        applyFilters(filters)
     }
 
     private fun applyFilters(filters: RestaurantFilters) {
         currentFilters = filters
-        allRestaurantPreviews.clear()
         searchOffset = 0.0
         restaurantPreviewAdapter.updateList(emptyList())
+        allRestaurantPreviews.clear()
         fetchRestaurantPreviews(currentFilters)
     }
 
@@ -174,6 +174,7 @@ class MainActivity : AppCompatActivity(), RestaurantPreviewAdapter.OnItemClickLi
 
     private fun fetchRestaurantPreviews(filters: RestaurantFilters) {
         val distanceKm = getDistanceFromFilter() + searchOffset
+        Log.d("MainActivity", "Filters: $filters")
         Log.d("MainActivity", "Fetching restaurants with distance: $distanceKm km")
 
         if (!isLoading) {
